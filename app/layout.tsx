@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(base),
   title: "N.A.W. Bathrooms Leeds | Premium Bathroom Renovation Site",
   description:
-    "Premium React concept for N.A.W. Bathrooms in Leeds: bathroom renovations, plumbing, tiling and free no-obligation quotes.",
+    "Bathroom renovations, plumbing and tiling in Leeds from N.A.W. Bathrooms. Call or email for a free no-obligation quote.",
   robots: "index, follow",
   openGraph: {
     type: "website",
     url: base,
     title: "N.A.W. Bathrooms Leeds",
-    description: "Premium bathroom renovation and plumbing site concept for N.A.W. Bathrooms in Leeds.",
+    description: "Bathroom renovations, plumbing and tiling in Leeds from N.A.W. Bathrooms.",
     images: [`${base}/assets/van.jpg`],
   },
   twitter: {

@@ -11,7 +11,6 @@ import {
   Bath,
   BadgeCheck,
   Hammer,
-  Home,
   Mail,
   MapPin,
   Phone,
@@ -43,6 +42,14 @@ const gallery = [
   ["stripout-work.jpg", "Strip-out and preparation work"],
   ["work-person-2.jpg", "Plumbing work in progress"],
 ];
+
+function FacebookIcon({ size = 21 }: { size?: number }) {
+  return (
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14 8.3V6.9c0-.7.2-1.1 1.2-1.1h1.7V3.1c-.8-.1-1.6-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v1.1H7.7v3h2.7V21H14v-9.7h2.6l.4-3H14Z" />
+    </svg>
+  );
+}
 
 function BathroomScene() {
   const rig = useRef<Group>(null);
@@ -171,10 +178,10 @@ export default function Page() {
 
       <section id="top" className="relative mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-24 pt-28 sm:px-8 lg:grid-cols-[.92fr_1.08fr]">
         <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
-          <p className="mb-5 w-fit rounded-full border border-white/12 bg-white/6 px-4 py-2 text-xs font-black uppercase tracking-[.18em] text-red-200">Premium outreach demo</p>
+          <p className="mb-5 w-fit rounded-full border border-white/12 bg-white/6 px-4 py-2 text-xs font-black uppercase tracking-[.18em] text-red-200">Leeds bathroom renovations</p>
           <h1 className="max-w-3xl text-[clamp(3.2rem,8vw,7.2rem)] font-black leading-[.86] tracking-normal">Bathroom work that feels safe to start.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/66 sm:text-xl">
-            A premium site for N.A.W. should lead with trust: the real van, Neil’s local story, the finished bathroom, and a clear quote path.
+            Start-to-finish bathroom renovation, plumbing and tiling from a Leeds tradesman with a clear quote path.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="tel:01132606275"><Button asChild variant="brass" className="min-h-12 rounded-xl"><span><Phone size={18} />Call 0113 2606275</span></Button></a>
@@ -202,7 +209,7 @@ export default function Page() {
       <section id="services" className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-8">
         <div className="mb-10 max-w-3xl">
           <p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-red-200">Services</p>
-          <h2 className="text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">Make the buyer recognise their job fast.</h2>
+          <h2 className="text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">Bathroom renovation services in one place.</h2>
         </div>
         <div className="services-grid grid grid-cols-1 gap-4 md:grid-cols-2">
           {services.map((service) => (
@@ -221,13 +228,13 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.85fr_1.15fr]">
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-red-200">Trust path</p>
-            <h2 className="text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">No fake proof. Real local signals.</h2>
+            <h2 className="text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">Clear reasons to call Neil first.</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
-              [BadgeCheck, "Neil’s story", "Nextdoor lists Neil’s 20+ years and start-to-finish bathroom renovation work."],
-              [ShieldCheck, "Real job photos", "Use the finished bathroom and active work photos to make the page feel human."],
-              [Send, "Clear next step", "Call, email or Facebook message with the job and photos for a free quote."],
+              [BadgeCheck, "20+ years", "Bathroom renovation experience for Leeds homeowners, from planning through to finish."],
+              [ShieldCheck, "Real job photos", "Finished bathroom and work-underway photos show the kind of practical work N.A.W. handles."],
+              [Send, "Free quote path", "Call, email or Facebook message with the job details and photos to request a no-obligation quote."],
             ].map(([Icon, title, body]) => (
               <Card key={String(title)} className="border-white/10 bg-white/[.055] text-white">
                 <CardContent className="p-6">
@@ -245,7 +252,7 @@ export default function Page() {
         <div className="mb-9 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-red-200">Project photos</p>
-            <h2 className="max-w-3xl text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">Outcome, van, people, work underway.</h2>
+            <h2 className="max-w-3xl text-[clamp(2.4rem,5vw,4.8rem)] font-black leading-none">Finished bathroom, branded van and work in progress.</h2>
           </div>
         </div>
         <div className="gallery-track flex w-[122%] gap-4 max-md:w-full max-md:flex-col">
@@ -259,9 +266,9 @@ export default function Page() {
 
       <section id="location" className="relative z-10 mx-auto grid max-w-7xl gap-6 px-4 py-24 sm:px-8 lg:grid-cols-[.82fr_1fr]">
         <div className="rounded-3xl bg-[#385947] p-8 text-white lg:p-12">
-          <p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-amber-200">Leeds local SEO</p>
+          <p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-amber-200">Leeds local service</p>
           <h2 className="text-[clamp(2.2rem,5vw,4.5rem)] font-black leading-none">N.A.W. Bathrooms near Penda’s Way, Leeds</h2>
-          <p className="mt-6 leading-8 text-white/72">Listed in Leeds, LS15 8HX. Use the map to support local trust, then keep the main action phone-first.</p>
+          <p className="mt-6 leading-8 text-white/72">Based around LS15, N.A.W. handles bathroom renovation, plumbing and tiling work across Leeds.</p>
           <div className="mt-7 grid gap-3 text-sm font-black">
             <a href="tel:01132606275">0113 2606275</a>
             <a href="tel:07714444475">07714 444475</a>
@@ -284,7 +291,7 @@ export default function Page() {
           {[
             [Phone, "tel:07714444475", "Call"],
             [Mail, "mailto:NAW.Bathrooms@btinternet.com", "Email"],
-            [Home, "https://www.facebook.com/people/NAW-Bathrooms/100054213141467/", "Facebook"],
+            [FacebookIcon, "https://www.facebook.com/people/NAW-Bathrooms/100054213141467/", "Facebook"],
             [MapPin, "https://www.google.com/maps/search/?api=1&query=N.A.W.%20Bathrooms%20Penda%27s%20Way%20Leeds%20LS15%208HX", "Google Maps"],
           ].map(([Icon, href, label]) => (
             <a key={label as string} href={href as string} aria-label={label as string} className="grid h-11 w-11 place-items-center rounded-full bg-white text-black">
