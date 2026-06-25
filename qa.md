@@ -32,4 +32,4 @@ Status: rebuilt premium version using the prior premium React stack.
 
 ## Deploy
 
-- Pending: live GitHub Pages QA after deploy.
+- PASS: Live GitHub Pages returned 200 and live HTML/assets contain business name, schema, map/contact block and OG image.
