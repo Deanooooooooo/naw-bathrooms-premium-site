@@ -26,6 +26,15 @@ body {
   background-size: 56px 56px, 100% 100%;
 }
 
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
 img,
 canvas,
 iframe {
@@ -92,23 +101,12 @@ button {
   }
 
   h1 {
-    width: 300px;
-    max-width: 300px;
-    font-size: 2.12rem !important;
-    line-height: 1.04 !important;
+    font-size: 2.75rem !important;
+    line-height: 0.96 !important;
   }
 
   h2 {
-    max-width: 330px;
     font-size: 2.15rem !important;
     line-height: 1.05 !important;
-  }
-
-  p {
-    max-width: 300px !important;
-  }
-
-  section {
-    max-width: 390px;
   }
 }
